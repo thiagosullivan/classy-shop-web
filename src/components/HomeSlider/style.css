@@ -1,0 +1,11 @@
+.homeSlider {
+  max-height: 650px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: space-between;
+}
+.homeSlider img {
+  max-height: 650px;
+  height: 100%;
+}
