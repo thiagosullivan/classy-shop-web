@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-import storeLogo from "../../assets/logo.svg";
-import Search from "../Searcher";
+
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
-import Tooltip from "@mui/material/Tooltip";
+
 import Navigation from "./Navigation";
+import Search from "../Searcher";
+
+// import storeLogo from "../../assets/logo.svg";
+import storeLogo from "../../assets/styleshop-logo-2.png";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "&.MuiBadge-badge": {
@@ -58,7 +62,7 @@ export const Header = () => {
         <div className="container flex items-center justify-between">
           <div className="col-1 w-[25%]">
             <Link to="/">
-              <img src={storeLogo} className="w-[225px] h-[45px]" />
+              <img src={storeLogo} className="w-[90%]" alt="Style Shop" />
             </Link>
           </div>
           <div className="col-2 w-[45%]">

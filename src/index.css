@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ff5252;
+  --color-primary: #ff4061;
 }
 
 * {
@@ -22,11 +22,11 @@ body {
 }
 
 .link:hover {
-  color: #ff5252;
+  color: #ff4061;
 }
 
 .MuiBadge-badge {
-  background-color: #ff5252 !important;
+  background-color: #ff4061 !important;
 }
 
 button {
@@ -46,5 +46,5 @@ button {
 
 nav ul button:hover {
   background: none !important;
-  color: #ff5252 !important;
+  color: #ff4061 !important;
 }
