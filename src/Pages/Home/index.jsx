@@ -4,6 +4,7 @@ import { LiaShippingFastSolid } from "react-icons/lia";
 
 import HomeSlider from "../../components/HomeSlider";
 import HomeCategoriesSlider from "../../components/CatSlider";
+import AdsBannerSlider from "../../components/AdsBannerSlider";
 
 const Home = () => {
   return (
@@ -27,6 +28,8 @@ const Home = () => {
             <div className="h-[40px] border-r border-gray-300 w-[1px]" />
             <p className="font-bold text-4xl"> - Only $200</p>
           </div>
+
+          <AdsBannerSlider items={4} />
         </div>
       </section>
     </>
