@@ -9,6 +9,7 @@ import AdsBannerSlider from "../../components/AdsBannerSlider";
 
 import { LiaShippingFastSolid } from "react-icons/lia";
 import ProductsSlider from "../../components/ProductsSlider";
+import { BlogSection } from "../../components/BlogSection";
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -73,6 +74,27 @@ const Home = () => {
           </div>
 
           <AdsBannerSlider items={4} />
+
+          <img
+            src="/banner-small.jpg"
+            alt="Banner"
+            className="w-full rounded-md"
+          />
+        </div>
+      </section>
+
+      <section className="py-5">
+        <div className="container">
+          <h2 className="text-xl font-bold !mb-4">Latest Products</h2>
+          <ProductsSlider items={5} />
+          <AdsBannerSlider items={4} />
+        </div>
+      </section>
+
+      <section className="blogSection py-5 pt-0 bg-white">
+        <div className="py-5 container">
+          <h2 className="text-xl font-bold !mb-4">Our Blog</h2>
+          <BlogSection items={3} />
         </div>
       </section>
     </>
