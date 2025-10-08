@@ -1,7 +1,9 @@
-import { Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 import "./style.css";
 
 const HomeSlider = () => {
@@ -9,8 +11,16 @@ const HomeSlider = () => {
     <div className="homeSlider">
       <Swiper
         spaceBetween={30}
-        modules={[Navigation]}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
