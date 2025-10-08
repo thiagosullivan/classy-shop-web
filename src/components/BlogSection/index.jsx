@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import BlogItem from "../BlogItem";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { BlogItem } from "../BlogItem";
 
 export const BlogSection = ({ items }) => {
   return (
@@ -15,6 +15,24 @@ export const BlogSection = ({ items }) => {
         navigation={true}
         className="mySwiper"
       >
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <BlogItem />
+        </SwiperSlide>
         <SwiperSlide>
           <BlogItem />
         </SwiperSlide>

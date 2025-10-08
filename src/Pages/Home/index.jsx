@@ -10,6 +10,7 @@ import AdsBannerSlider from "../../components/AdsBannerSlider";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import ProductsSlider from "../../components/ProductsSlider";
 import { BlogSection } from "../../components/BlogSection";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -97,6 +98,8 @@ const Home = () => {
           <BlogSection items={3} />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };
