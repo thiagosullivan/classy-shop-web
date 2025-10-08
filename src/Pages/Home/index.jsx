@@ -1,16 +1,59 @@
 import React from "react";
-
-import { LiaShippingFastSolid } from "react-icons/lia";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
 
 import HomeSlider from "../../components/HomeSlider";
 import HomeCategoriesSlider from "../../components/CatSlider";
 import AdsBannerSlider from "../../components/AdsBannerSlider";
 
+import { LiaShippingFastSolid } from "react-icons/lia";
+import ProductsSlider from "../../components/ProductsSlider";
+
 const Home = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <HomeSlider />
       <HomeCategoriesSlider />
+
+      <section className="bg-white py-8">
+        <div className="container">
+          <div className="flex items-center justify-between">
+            <div className="leftSec">
+              <h2 className="text-xl font-bold">Popular Products</h2>
+              <p className="text-sm font-medium">
+                Do not miss the current offers until the end of March.
+              </p>
+            </div>
+            <div className="rightSec w-[50%]">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                aria-label="scrollable auto tabs example"
+              >
+                <Tab label="Fashion" />
+                <Tab label="Eletronics" />
+                <Tab label="Bags" />
+                <Tab label="Footwear" />
+                <Tab label="Groceries" />
+                <Tab label="Beauty" />
+                <Tab label="Wellness" />
+                <Tab label="Jewellery" />
+              </Tabs>
+            </div>
+          </div>
+
+          <ProductsSlider items={5} />
+        </div>
+      </section>
 
       <section className="py-5 bg-white">
         <div className="container">
