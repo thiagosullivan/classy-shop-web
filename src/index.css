@@ -67,3 +67,15 @@ nav ul button:hover {
   fill: rgba(0, 0, 0, 0.5);
   color: rgba(0, 0, 0, 0.5);
 }
+
+/* Tabs */
+.MuiTabs-root .Mui-selected {
+  color: #ff4061 !important;
+}
+.MuiTabs-indicator {
+  background-color: #ff4061 !important;
+}
+
+.productSlider .swiper-wrapper {
+  margin-left: 0 !important;
+}
