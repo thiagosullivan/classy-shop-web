@@ -6,11 +6,10 @@ import Box from "@mui/material/Box";
 import HomeSlider from "../../components/HomeSlider";
 import HomeCategoriesSlider from "../../components/CatSlider";
 import AdsBannerSlider from "../../components/AdsBannerSlider";
-
-import { LiaShippingFastSolid } from "react-icons/lia";
 import ProductsSlider from "../../components/ProductsSlider";
 import { BlogSection } from "../../components/BlogSection";
-import Footer from "../../components/Footer";
+
+import { LiaShippingFastSolid } from "react-icons/lia";
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -98,8 +97,6 @@ const Home = () => {
           <BlogSection items={3} />
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

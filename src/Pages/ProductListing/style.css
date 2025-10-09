@@ -1,0 +1,8 @@
+.rightContent .col1 .list-btn,
+.rightContent .col1 .grid-btn {
+  min-width: unset !important;
+}
+.rightContent .col1 .list-btn.active svg,
+.rightContent .col1 .grid-btn.active svg {
+  color: #ff4061 !important;
+}
