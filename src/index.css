@@ -87,3 +87,39 @@ nav ul button:hover {
 .productSlider .swiper-wrapper {
   margin-left: 0 !important;
 }
+
+.zoomProductsSlider .swiper-slide {
+  height: auto !important;
+}
+.zoomProductsSlider .swiper-button-next {
+  bottom: 0px !important;
+  left: 25% !important;
+  top: inherit !important;
+  width: 100% !important;
+  height: 30px !important;
+  border-radius: 0px !important;
+}
+.zoomProductsSlider .swiper-button-next:hover {
+  background-color: #ff4061 !important;
+}
+.zoomProductsSlider .swiper-button-prev {
+  top: 0px !important;
+  left: 25% !important;
+  width: 100% !important;
+  height: 30px !important;
+  border-radius: 0px !important;
+}
+.zoomProductsSlider .swiper-button-prev:hover {
+  background-color: #ff4061 !important;
+}
+
+.size-btn .actions .MuiButton-root {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 2px 2px !important;
+  width: 35px !important;
+  height: 35px;
+  display: flex;
+}
+.size-btn .actions .MuiButton-root span {
+  width: unset !important;
+}
