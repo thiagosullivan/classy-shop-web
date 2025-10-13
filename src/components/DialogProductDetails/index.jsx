@@ -6,7 +6,6 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
-import { useState } from "react";
 import { BiX } from "react-icons/bi";
 import { ProductZoom } from "../ProductZoom";
 import { ProductDetailsComp } from "../ProductDetails";

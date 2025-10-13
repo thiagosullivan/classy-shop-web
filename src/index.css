@@ -142,3 +142,9 @@ nav ul button:hover {
 .MuiDialog-container .MuiPaper-root {
   max-width: unset !important;
 }
+
+/* CART */
+.cartPanel .MuiPaper-root {
+  width: 500px;
+  padding: 20px;
+}

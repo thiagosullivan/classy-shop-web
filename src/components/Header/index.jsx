@@ -13,6 +13,7 @@ import Search from "../Searcher";
 
 // import storeLogo from "../../assets/logo.svg";
 import storeLogo from "../../assets/styleshop-logo-2.png";
+import { useCart } from "../../hooks/use-cart";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "&.MuiBadge-badge": {
@@ -24,6 +25,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export const Header = () => {
+  const { OpenCartFunction } = useCart();
+
   return (
     <header className="bg-white">
       <div className="top-strip py-2 border-b-[1px] border-gray-300 bg-primary">
@@ -87,7 +90,7 @@ export const Header = () => {
               </li>
               <li>
                 <Tooltip title="Compare" placement="top">
-                  <IconButton aria-label="cart">
+                  <IconButton aria-label="compare">
                     <StyledBadge badgeContent={4} color="secondary">
                       <IoGitCompareOutline />
                     </StyledBadge>
@@ -96,7 +99,7 @@ export const Header = () => {
               </li>
               <li>
                 <Tooltip title="Wishlist" placement="top">
-                  <IconButton aria-label="cart">
+                  <IconButton aria-label="wishlist">
                     <StyledBadge badgeContent={4} color="secondary">
                       <FaRegHeart />
                     </StyledBadge>
@@ -105,7 +108,7 @@ export const Header = () => {
               </li>
               <li>
                 <Tooltip title="Cart" placement="top">
-                  <IconButton aria-label="cart">
+                  <IconButton aria-label="cart" onClick={OpenCartFunction}>
                     <StyledBadge badgeContent={4} color="secondary">
                       <MdOutlineShoppingCart />
                     </StyledBadge>

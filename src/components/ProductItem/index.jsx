@@ -8,7 +8,7 @@ import { MdZoomOutMap } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
 
-import { ModalProductContext } from "../../contexts/AppContext";
+import { ModalProductContext } from "../../contexts/ModalContext";
 
 import "./style.css";
 import { useModal } from "../../hooks/use-modal";
