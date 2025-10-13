@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { ProductDetails } from "./Pages/ProductDetails";
 import { DialogProductDetails } from "./components/DialogProductDetails";
 import { ModalProductProvider } from "./contexts/AppContext";
+import { LoginPage } from "./Pages/Login";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               exact="true"
               element={<ProductDetails />}
             />
+            <Route path="/login" exact="true" element={<LoginPage />} />
           </Routes>
           <Footer />
           <DialogProductDetails />
