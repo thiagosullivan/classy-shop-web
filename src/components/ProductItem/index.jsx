@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
@@ -9,9 +8,14 @@ import { MdZoomOutMap } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
 
+import { ModalProductContext } from "../../contexts/ModalContext";
+
 import "./style.css";
+import { useModal } from "../../hooks/use-modal";
 
 const ProductItem = () => {
+  const { OpenProductDetailsModalFunction } = useModal();
+
   return (
     <div className="productItem rounded-lg overflow-hidden border-1 border-gray-400 !my-4 shadow-lg">
       <div className="group imgWrapper w-full h-[250px] overflow-hidden relative">
@@ -25,7 +29,10 @@ const ProductItem = () => {
         </span>
         <div className="actions absolute top-[-200px] right-[15px] z-50 flex items-center gap-3 flex-col w-[40px] transition-all duration-500 group-hover:top-[15px]">
           <Tooltip title="Zoom" placement="right">
-            <Button className="!w-[40px] !h-[40px] !min-w-[40px] rounded-full !bg-white !hover:bg-primary group">
+            <Button
+              onClick={() => OpenProductDetailsModalFunction()}
+              className="!w-[40px] !h-[40px] !min-w-[40px] rounded-full !bg-white !hover:bg-primary group"
+            >
               <MdZoomOutMap className="text-lg text-black group-hover:text-primary transition-all" />
             </Button>
           </Tooltip>
@@ -43,12 +50,12 @@ const ProductItem = () => {
       </div>
       <div className="info p-3">
         <h6 className="text-sm">
-          <Link to="/" className="text-primary">
+          <Link to="/product/12345" className="text-primary">
             Soylent Green
           </Link>
         </h6>
         <h3 className="text-base title !mt-2 !mb-4 font-medium text-[rgba(0,0,0,0.9)]">
-          <Link to="/" className="link">
+          <Link to="/product/12345" className="link">
             Siril Georgette Pink Color Saree with Blouse piece{" "}
           </Link>
         </h3>
