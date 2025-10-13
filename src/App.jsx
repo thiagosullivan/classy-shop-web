@@ -8,6 +8,7 @@ import { ProductDetails } from "./Pages/ProductDetails";
 import { DialogProductDetails } from "./components/DialogProductDetails";
 import { ModalProductProvider } from "./contexts/AppContext";
 import { LoginPage } from "./Pages/Login";
+import RegisterPage from "./Pages/Register";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               element={<ProductDetails />}
             />
             <Route path="/login" exact="true" element={<LoginPage />} />
+            <Route path="/register" exact="true" element={<RegisterPage />} />
           </Routes>
           <Footer />
           <DialogProductDetails />

@@ -6,7 +6,7 @@ import { Button, TextField } from "@mui/material";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 
-export const LoginPage = () => {
+const RegisterPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
 
   return (
@@ -14,10 +14,19 @@ export const LoginPage = () => {
       <div className="container flex justify-center">
         <div className="card shadow-md w-[500px] rounded-md bg-white py-5 px-10">
           <h3 className="text-center text-lg text-black font-medium !mb-4">
-            Login to your account
+            Create a new account
           </h3>
 
           <form className="w-full flex flex-col gap-3">
+            <div className="form-group">
+              <TextField
+                type="text"
+                id="name"
+                label="Full Name"
+                variant="outlined"
+                className="w-full"
+              />
+            </div>
             <div className="form-group">
               <TextField
                 type="email"
@@ -47,18 +56,16 @@ export const LoginPage = () => {
               </Button>
             </div>
 
-            <a href="/" className="link text-sm font-medium !my-2">
-              Forgot Password?
-            </a>
-
             <div className="flex items-center w-full mt-3">
-              <Button className="!bg-primary !text-white w-full">Login</Button>
+              <Button className="!bg-primary !text-white w-full">
+                Register
+              </Button>
             </div>
 
             <p className="text-center !my-2 border-b border-gray-200 !pb-2">
-              Not Registered?{" "}
+              Already have an account?{" "}
               <Link to="/register" className="link text-sm font-medium">
-                Sign Up
+                Login
               </Link>
             </p>
             <div className="flex flex-col gap-2">
@@ -75,3 +82,5 @@ export const LoginPage = () => {
     </section>
   );
 };
+
+export default RegisterPage;
