@@ -14,6 +14,7 @@ import { Cart } from "./components/Cart";
 
 import { ModalProductProvider } from "./contexts/ModalContext";
 import { CartProvider } from "./contexts/CartContext";
+import { CartPage } from "./Pages/Cart";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               />
               <Route path="/login" exact="true" element={<LoginPage />} />
               <Route path="/register" exact="true" element={<RegisterPage />} />
+              <Route path="/cart" exact="true" element={<CartPage />} />
             </Routes>
             <Footer />
             <DialogProductDetails />
