@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Button, TextField } from "@mui/material";
 
@@ -8,6 +8,18 @@ import { FcGoogle } from "react-icons/fc";
 
 export const LoginPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
+  const [formFields, setFormFields] = useState({
+    email: "",
+    password: "",
+  });
+
+  const history = useNavigate();
+
+  const forgotPassword = () => {
+    if (formFields.email !== "") {
+      history("/verify");
+    }
+  };
 
   return (
     <section className="section py-10">
@@ -25,6 +37,7 @@ export const LoginPage = () => {
                 label="Email Id *"
                 variant="outlined"
                 className="w-full"
+                name="email"
               />
             </div>
             <div className="form-group w-full mb-5 relative">
@@ -34,6 +47,7 @@ export const LoginPage = () => {
                 label="Password *"
                 variant="outlined"
                 className="w-full"
+                name="password"
               />
               <Button
                 className="!absolute top-[10px] right-[10px] z-50 !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black"
@@ -47,9 +61,13 @@ export const LoginPage = () => {
               </Button>
             </div>
 
-            <a href="/" className="link text-sm font-medium !my-2">
+            <p
+              href="/"
+              className="link text-sm font-medium !my-2 cursor-pointer"
+              onClick={forgotPassword}
+            >
               Forgot Password?
-            </a>
+            </p>
 
             <div className="flex items-center w-full mt-3">
               <Button className="!bg-primary !text-white w-full">Login</Button>
