@@ -255,10 +255,12 @@ export const CartPage = () => {
                   </p>
                 </div>
 
-                <Button className="!bg-primary !text-white w-full">
-                  <BsFillBagCheckFill className="text-xl !mr-2" />
-                  Checkout
-                </Button>
+                <Link to="/checkout">
+                  <Button className="!bg-primary !text-white w-full !py-2">
+                    <BsFillBagCheckFill className="text-xl !mr-2" />
+                    Checkout
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

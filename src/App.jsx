@@ -18,6 +18,7 @@ import { ModalProductProvider } from "./contexts/ModalContext";
 import { CartProvider } from "./contexts/CartContext";
 import { Toaster } from "react-hot-toast";
 import { ForgotPasswordPage } from "./Pages/ForgotPassword";
+import { CheckoutPage } from "./Pages/Checkout";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
                 exact="true"
                 element={<ForgotPasswordPage />}
               />
+              <Route path="/checkout" exact="true" element={<CheckoutPage />} />
             </Routes>
             <Footer />
             <DialogProductDetails />
