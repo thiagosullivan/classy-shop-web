@@ -17,6 +17,7 @@ import { Cart } from "./components/Cart";
 import { ModalProductProvider } from "./contexts/ModalContext";
 import { CartProvider } from "./contexts/CartContext";
 import { Toaster } from "react-hot-toast";
+import { ForgotPasswordPage } from "./Pages/ForgotPassword";
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
               <Route path="/register" exact="true" element={<RegisterPage />} />
               <Route path="/cart" exact="true" element={<CartPage />} />
               <Route path="/verify" exact="true" element={<VerifyPage />} />
+              <Route
+                path="/forgot-password"
+                exact="true"
+                element={<ForgotPasswordPage />}
+              />
             </Routes>
             <Footer />
             <DialogProductDetails />

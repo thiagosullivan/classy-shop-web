@@ -61,13 +61,13 @@ export const LoginPage = () => {
               </Button>
             </div>
 
-            <p
-              href="/"
+            <Link
+              to="/forgot-password"
               className="link text-sm font-medium !my-2 cursor-pointer"
-              onClick={forgotPassword}
+              // onClick={forgotPassword}
             >
               Forgot Password?
-            </p>
+            </Link>
 
             <div className="flex items-center w-full mt-3">
               <Button className="!bg-primary !text-white w-full">Login</Button>
