@@ -6,6 +6,8 @@ import ProductListing from "./Pages/ProductListing";
 import { ProductDetails } from "./Pages/ProductDetails";
 import { LoginPage } from "./Pages/Login";
 import RegisterPage from "./Pages/Register";
+import { CartPage } from "./Pages/Cart";
+import { VerifyPage } from "./Pages/Verify";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,6 +16,9 @@ import { Cart } from "./components/Cart";
 
 import { ModalProductProvider } from "./contexts/ModalContext";
 import { CartProvider } from "./contexts/CartContext";
+import { Toaster } from "react-hot-toast";
+import { ForgotPasswordPage } from "./Pages/ForgotPassword";
+import { CheckoutPage } from "./Pages/Checkout";
 
 function App() {
   return (
@@ -36,10 +41,19 @@ function App() {
               />
               <Route path="/login" exact="true" element={<LoginPage />} />
               <Route path="/register" exact="true" element={<RegisterPage />} />
+              <Route path="/cart" exact="true" element={<CartPage />} />
+              <Route path="/verify" exact="true" element={<VerifyPage />} />
+              <Route
+                path="/forgot-password"
+                exact="true"
+                element={<ForgotPasswordPage />}
+              />
+              <Route path="/checkout" exact="true" element={<CheckoutPage />} />
             </Routes>
             <Footer />
             <DialogProductDetails />
             <Cart />
+            <Toaster />
           </CartProvider>
         </ModalProductProvider>
       </BrowserRouter>
