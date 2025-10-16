@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
@@ -7,6 +8,7 @@ import Tooltip from "@mui/material/Tooltip";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
 
 import Navigation from "./Navigation";
 import Search from "../Searcher";
@@ -26,6 +28,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export const Header = () => {
   const { OpenCartFunction } = useCart();
+  const [isUserLogged, setIsUserLogged] = useState(true);
 
   return (
     <header className="bg-white">
@@ -73,21 +76,36 @@ export const Header = () => {
           </div>
           <div className="col-3 w-[30%] flex items-center pl-7">
             <ul className="flex items-center justify-end gap-3 w-full">
-              <li className="list-none">
-                <Link
-                  className="link transition font-[500] text-sm"
-                  to="/login"
-                >
-                  Login
-                </Link>{" "}
-                | &nbsp;{" "}
-                <Link
-                  className="link transition font-[500] text-sm"
-                  to="/register"
-                >
-                  Register
+              {isUserLogged ? (
+                <Link to="account">
+                  <li className="flex justify-between gap-x-3">
+                    <div className="bg-[#e0e0e0] flex items-center justify-center h-[45px] w-[45px] rounded-full">
+                      <FaRegUser className="text-lg" />
+                    </div>
+                    <div>
+                      <p className="font-bold">Rinku Verma</p>
+                      <p className="text-sm">rinkuv.planetc@gmail.com</p>
+                    </div>
+                  </li>
                 </Link>
-              </li>
+              ) : (
+                <li className="list-none">
+                  <Link
+                    className="link transition font-[500] text-sm"
+                    to="/login"
+                  >
+                    Login
+                  </Link>{" "}
+                  | &nbsp;{" "}
+                  <Link
+                    className="link transition font-[500] text-sm"
+                    to="/register"
+                  >
+                    Register
+                  </Link>
+                </li>
+              )}
+
               <li>
                 <Tooltip title="Compare" placement="top">
                   <IconButton aria-label="compare">

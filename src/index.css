@@ -175,3 +175,19 @@ nav ul button:hover {
   background-color: #f9fafb;
   cursor: not-allowed;
 }
+
+/* tabs account */
+.tabAccount .MuiTabs-list {
+  display: flex;
+  flex-direction: column;
+}
+.tabAccount .MuiTabs-indicator {
+  display: none;
+}
+.tabAccount .MuiButtonBase-root {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0px !important;
+  text-align: left;
+  width: 100%;
+  max-width: unset !important;
+}
